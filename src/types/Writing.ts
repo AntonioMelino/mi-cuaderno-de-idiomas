@@ -20,3 +20,15 @@ export interface Language {
   name: string; // "Inglés", "Italiano"...
   levels: Level[];
 }
+
+export type NoteCategory = "Gramática" | "Vocabulario" | "Pronunciación";
+
+export interface Note {
+  id: string;
+  title: string;
+  category: NoteCategory;
+  /** HTML simple: explicación + ejemplos */
+  content: string;
+  /** Si está presente, se renderiza un widget interactivo debajo del content */
+  interactive?: "clock";
+}
