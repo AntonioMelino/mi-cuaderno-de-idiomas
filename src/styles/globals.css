@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600&family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+:root {
+  --paper: #f5f1e7;
+  --paper-dark: #eae2ce;
+  --paper-line: #c7d4e6;
+  --ink: #1c2541;
+  --ink-soft: #42507a;
+  --red: #b93a32;
+  --red-soft: #e9c3bc;
+  --gold: #b8863b;
+  --text: #2b2b26;
+  --text-muted: #6b6a5f;
+}
+
+@theme {
+  --font-display: "Fraunces", serif;
+  --font-body: "Work Sans", sans-serif;
+  --font-hand: "Caveat", cursive;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-paper: var(--paper);
+  --color-paper-dark: var(--paper-dark);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-red: var(--red);
+  --color-red-soft: var(--red-soft);
+  --color-gold: var(--gold);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 34px,
+      var(--paper-line) 35px
+    ),
+    var(--paper);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--red-soft);
+  color: var(--ink);
+}
+
+.mistake {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--red);
+  text-underline-offset: 3px;
+}
+
+.fix {
+  color: var(--red);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--red-soft);
+  text-underline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
