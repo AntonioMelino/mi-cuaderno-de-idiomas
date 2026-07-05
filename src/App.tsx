@@ -6,17 +6,21 @@ import { ContentTabs } from "./components/ContentTabs";
 import { WritingsList } from "./components/WritingsList";
 import { NotesList } from "./components/NotesList";
 import { ProgressFooter } from "./components/ProgressFooter";
-import { languages, writingsByLanguage, notesByLanguage } from "./data/languages";
+import {
+  languages,
+  writingsByLanguage,
+  notesByLanguage,
+} from "./data/languages";
 
 function App() {
   const [selectedCode, setSelectedCode] = useState(languages[0].code);
   const [contentType, setContentType] = useState<"writings" | "notes">(
-    "writings"
+    "writings",
   );
   const selectedLanguage = languages.find((l) => l.code === selectedCode)!;
 
   const activeLevel = selectedLanguage.levels.find(
-    (l) => l.status === "active" || l.status === "done"
+    (l) => l.status === "active" || l.status === "done",
   );
   const nextLevel =
     selectedLanguage.levels[
@@ -24,10 +28,10 @@ function App() {
     ];
 
   const writings = activeLevel
-    ? writingsByLanguage[selectedLanguage.code]?.[activeLevel.code] ?? []
+    ? (writingsByLanguage[selectedLanguage.code]?.[activeLevel.code] ?? [])
     : [];
   const notes = activeLevel
-    ? notesByLanguage[selectedLanguage.code]?.[activeLevel.code] ?? []
+    ? (notesByLanguage[selectedLanguage.code]?.[activeLevel.code] ?? [])
     : [];
 
   const hasContent = writings.length > 0 || notes.length > 0;
@@ -35,7 +39,7 @@ function App() {
   return (
     <div className="max-w-[980px] mx-auto px-6">
       <div className="bg-ink text-paper font-mono text-[12.5px] tracking-[0.02em] text-center py-2 px-3 -mx-6 mb-0">
-        📌 CONTENIDO DE EJEMPLO — se reemplaza por tus writings y apuntes reales
+        📌 MI CUADERNO DE IDIOMAS — acá guardo los apuntes y los writings
       </div>
 
       <Hero

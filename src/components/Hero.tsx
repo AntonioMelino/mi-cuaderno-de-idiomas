@@ -19,8 +19,8 @@ export function Hero({ currentLevel, currentLanguage }: HeroProps) {
             </span>
           </h1>
           <p className="font-hand text-2xl text-ink-soft mt-4 max-w-[520px] -rotate-1">
-            acá guardo cada writing, corregido a mano por mi profe — idioma
-            por idioma, nivel por nivel.
+            acá guardo cada apunte y writing, corregido a mano por mi profe —
+            idioma por idioma, nivel por nivel.
           </p>
         </div>
 
