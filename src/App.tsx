@@ -52,6 +52,7 @@ function App() {
       <Hero
         currentLevel={activeLevel?.code ?? "—"}
         currentLanguage={selectedLanguage.name}
+        languageCode={selectedLanguage.code}
         theme={theme}
       />
 

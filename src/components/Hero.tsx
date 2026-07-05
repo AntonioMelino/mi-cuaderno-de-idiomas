@@ -1,12 +1,19 @@
 import type { LanguageTheme } from "../data/themes";
+import { FlagIcon } from "./FlagIcon";
 
 interface HeroProps {
   currentLevel: string;
   currentLanguage: string;
+  languageCode: string;
   theme: LanguageTheme;
 }
 
-export function Hero({ currentLevel, currentLanguage, theme }: HeroProps) {
+export function Hero({
+  currentLevel,
+  currentLanguage,
+  languageCode,
+  theme,
+}: HeroProps) {
   return (
     <section className="pt-8 pb-10">
       {/* Banner inmersivo con la imagen icónica del idioma */}
@@ -47,7 +54,7 @@ export function Hero({ currentLevel, currentLanguage, theme }: HeroProps) {
 
           <div className="max-w-[560px]">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-paper/15 px-3 py-1 backdrop-blur-sm">
-              <span className="text-lg leading-none">{theme.flag}</span>
+              <FlagIcon code={languageCode} colors={theme.flagColors} className="text-lg" />
               <span className="font-mono text-[11px] uppercase tracking-[0.1em] text-paper/90">
                 {theme.tagline}
               </span>

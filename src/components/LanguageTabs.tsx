@@ -1,5 +1,6 @@
 import type { Language } from "../types/Writing";
 import { getTheme } from "../data/themes";
+import { FlagIcon } from "./FlagIcon";
 
 interface LanguageTabsProps {
   languages: Language[];
@@ -19,7 +20,7 @@ export function LanguageTabs({
           (l) => l.status === "active" || l.status === "done"
         );
         const isSelected = lang.code === selected;
-        const flag = getTheme(lang.code).flag;
+        const theme = getTheme(lang.code);
         return (
           <button
             key={lang.code}
@@ -33,7 +34,7 @@ export function LanguageTabs({
               !hasProgress && !isSelected ? "opacity-60" : "",
             ].join(" ")}
           >
-            <span className="text-base leading-none">{flag}</span>
+            <FlagIcon code={lang.code} colors={theme.flagColors} className="text-base" />
             {lang.name}
             {!hasProgress && (
               <span className="font-mono text-[9px] uppercase tracking-[0.08em] ml-0.5 text-text-muted">
