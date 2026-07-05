@@ -21,7 +21,11 @@ export interface Language {
   levels: Level[];
 }
 
-export type NoteCategory = "Gramática" | "Vocabulario" | "Pronunciación";
+export type NoteCategory =
+  | "Gramática"
+  | "Vocabulario"
+  | "Pronunciación"
+  | "Expresiones";
 
 export interface Note {
   id: string;
