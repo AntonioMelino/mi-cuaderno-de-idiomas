@@ -5,6 +5,7 @@ export const expressionNotes: Note[] = [
     id: "en-a1-note-greetings",
     title: "Saludos y frases de cortesía",
     category: "Expresiones",
+    group: "Saludos",
     content: `
       <ul class="space-y-1">
         <li><code>hello</code> = hola</li>
@@ -21,6 +22,7 @@ export const expressionNotes: Note[] = [
     id: "en-a1-note-wear-requests",
     title: "Wear, pedidos y precios",
     category: "Expresiones",
+    group: "Compras y pedidos",
     content: `
       <ul class="space-y-1">
         <li><code>wear</code> = usar (ropa, anteojos, anillos, maquillaje)</li>

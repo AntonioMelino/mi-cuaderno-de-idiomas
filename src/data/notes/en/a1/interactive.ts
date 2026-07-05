@@ -5,6 +5,7 @@ export const interactiveNotes: Note[] = [
     id: "en-a1-note-time",
     title: "Cómo decir la hora",
     category: "Vocabulario",
+    group: "Tiempo",
     content: `
       <p>En digital es fácil: <code>3:15</code> se lee <strong>"three fifteen"</strong>.</p>
       <p>En formato "de agujas de reloj" se usa <strong>past</strong> (después de) y
