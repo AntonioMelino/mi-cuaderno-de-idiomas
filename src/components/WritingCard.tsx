@@ -31,7 +31,7 @@ export function WritingCard({ writing, index }: WritingCardProps) {
     <div
       ref={cardRef}
       className={[
-        "bg-paper-dark border border-[#d9d2ba] rounded-[14px] overflow-hidden transition-all duration-500",
+        "bg-paper-dark border border-[#d9d2ba] border-l-[3px] border-l-accent rounded-[14px] overflow-hidden transition-all duration-500",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4",
         "hover:shadow-[0_10px_30px_-12px_rgba(28,37,65,0.25)]",
       ].join(" ")}
@@ -42,7 +42,7 @@ export function WritingCard({ writing, index }: WritingCardProps) {
         aria-expanded={isOpen}
         onClick={() => setIsOpen((prev) => !prev)}
       >
-        <span className="font-mono text-[13px] text-gold font-semibold w-7 shrink-0">
+        <span className="font-mono text-[13px] text-accent font-semibold w-7 shrink-0">
           {String(index + 1).padStart(2, "0")}
         </span>
         <span className="flex-1 min-w-0">

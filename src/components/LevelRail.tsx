@@ -16,7 +16,7 @@ export function LevelRail({ levels }: LevelRailProps) {
           className={[
             "font-mono text-[13px] font-semibold px-4.5 py-2 rounded-full border-[1.5px] tracking-[0.03em] relative",
             level.status === "active" || level.status === "done"
-              ? "bg-ink text-paper border-ink"
+              ? "bg-accent-2 text-paper border-accent-2"
               : "border-dashed border-[#b8b39f] text-text-muted group",
           ].join(" ")}
           title={level.status === "locked" ? "Próximamente disponible" : undefined}

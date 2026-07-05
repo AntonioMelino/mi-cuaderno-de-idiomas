@@ -13,8 +13,8 @@ export function NoteCard({ note }: NoteCardProps) {
   const Widget = note.interactive ? interactiveWidgets[note.interactive] : null;
 
   return (
-    <div className="bg-paper-dark border border-[#d9d2ba] rounded-[14px] p-6">
-      <span className="font-mono text-[10.5px] uppercase tracking-[0.1em] text-gold">
+    <div className="bg-paper-dark border border-[#d9d2ba] border-t-[3px] border-t-accent rounded-[14px] p-6">
+      <span className="font-mono text-[10.5px] uppercase tracking-[0.1em] text-accent font-semibold">
         {note.category}
       </span>
       <h3 className="font-display font-semibold text-xl text-ink mt-1 mb-3">

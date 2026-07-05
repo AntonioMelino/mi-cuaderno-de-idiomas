@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Hero } from "./components/Hero";
 import { LanguageTabs } from "./components/LanguageTabs";
 import { LevelRail } from "./components/LevelRail";
@@ -11,6 +11,7 @@ import {
   writingsByLanguage,
   notesByLanguage,
 } from "./data/languages";
+import { getTheme } from "./data/themes";
 
 function App() {
   const [selectedCode, setSelectedCode] = useState(languages[0].code);
@@ -18,6 +19,12 @@ function App() {
     "writings",
   );
   const selectedLanguage = languages.find((l) => l.code === selectedCode)!;
+  const theme = getTheme(selectedLanguage.code);
+
+  // Aplica la paleta temática del idioma activo a toda la página.
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", selectedLanguage.code);
+  }, [selectedLanguage.code]);
 
   const activeLevel = selectedLanguage.levels.find(
     (l) => l.status === "active" || l.status === "done",
@@ -45,6 +52,7 @@ function App() {
       <Hero
         currentLevel={activeLevel?.code ?? "—"}
         currentLanguage={selectedLanguage.name}
+        theme={theme}
       />
 
       <div className="mt-2 mb-6">

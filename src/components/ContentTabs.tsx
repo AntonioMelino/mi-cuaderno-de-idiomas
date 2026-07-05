@@ -26,7 +26,7 @@ export function ContentTabs({
           className={[
             "font-mono text-[12.5px] px-4 py-1.5 rounded-full transition-colors",
             selected === tab.value
-              ? "bg-ink text-paper"
+              ? "bg-accent text-paper"
               : "text-ink-soft hover:text-ink",
           ].join(" ")}
         >

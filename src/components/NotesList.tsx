@@ -9,9 +9,9 @@ interface NotesListProps {
 export function NotesList({ levelCode, notes }: NotesListProps) {
   return (
     <section className="pt-16 pb-2">
-      <div className="flex items-baseline justify-between border-b-[1.5px] border-ink pb-3.5 mb-8.5 flex-wrap gap-2.5">
+      <div className="flex items-baseline justify-between border-b-[1.5px] border-accent-2 pb-3.5 mb-8.5 flex-wrap gap-2.5">
         <h2 className="font-display font-semibold text-2xl md:text-3xl text-ink m-0">
-          Apuntes — Nivel {levelCode}
+          <span className="text-accent-2">Apuntes</span> — Nivel {levelCode}
         </h2>
         <span className="font-mono text-[13px] text-text-muted">
           {notes.length} temas

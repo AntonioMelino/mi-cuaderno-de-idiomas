@@ -12,6 +12,37 @@
   --gold: #b8863b;
   --text: #2b2b26;
   --text-muted: #6b6a5f;
+
+  /* Acento temático por idioma (se sobreescribe según data-theme) */
+  --accent: #b93a32;
+  --accent-2: #1c2541;
+  --accent-soft: #e9c3bc;
+  --flag-1: #012169;
+  --flag-2: #ffffff;
+  --flag-3: #c8102e;
+  --page-tint: rgba(28, 37, 65, 0.035);
+}
+
+/* Inglés — rojo británico + azul marino Union Jack */
+[data-theme="en"] {
+  --accent: #c8102e;
+  --accent-2: #012169;
+  --accent-soft: #f2d2d7;
+  --flag-1: #012169;
+  --flag-2: #ffffff;
+  --flag-3: #c8102e;
+  --page-tint: rgba(1, 33, 105, 0.04);
+}
+
+/* Italiano — verde, blanco y rojo del tricolore */
+[data-theme="it"] {
+  --accent: #008c45;
+  --accent-2: #cd212a;
+  --accent-soft: #cfe8d6;
+  --flag-1: #008c45;
+  --flag-2: #ffffff;
+  --flag-3: #cd212a;
+  --page-tint: rgba(0, 140, 69, 0.05);
 }
 
 @theme {
@@ -27,6 +58,10 @@
   --color-red: var(--red);
   --color-red-soft: var(--red-soft);
   --color-gold: var(--gold);
+
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-accent-soft: var(--accent-soft);
 }
 
 * {
@@ -35,11 +70,13 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--paper);
 }
 
 body {
   margin: 0;
   background:
+    linear-gradient(var(--page-tint), var(--page-tint)),
     repeating-linear-gradient(
       to bottom,
       transparent 0px,
@@ -51,10 +88,11 @@ body {
   font-family: var(--font-body);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s ease;
 }
 
 ::selection {
-  background: var(--red-soft);
+  background: var(--accent-soft);
   color: var(--ink);
 }
 
@@ -71,6 +109,31 @@ body {
   text-decoration: underline;
   text-decoration-color: var(--red-soft);
   text-underline-offset: 3px;
+}
+
+/* Franja tricolor decorativa (colores de la bandera del idioma activo) */
+.flag-band {
+  background: linear-gradient(
+    to right,
+    var(--flag-1) 0 33.33%,
+    var(--flag-2) 33.33% 66.66%,
+    var(--flag-3) 66.66% 100%
+  );
+}
+
+/* Entrada suave del banner al cambiar de idioma */
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.hero-animate {
+  animation: hero-fade 0.6s ease both;
 }
 
 @media (prefers-reduced-motion: reduce) {

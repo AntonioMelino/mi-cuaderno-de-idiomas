@@ -23,7 +23,8 @@ export function ProgressFooter({
 
   return (
     <section className="mt-[70px] pt-9 pb-24">
-      <div className="bg-ink text-paper rounded-[18px] px-8 py-8.5 flex items-center justify-between gap-6 flex-wrap">
+      <div className="bg-accent-2 text-paper rounded-[18px] px-8 py-8.5 flex items-center justify-between gap-6 flex-wrap relative overflow-hidden">
+        <div className="flag-band absolute inset-x-0 top-0 h-1.5" />
         <div>
           <h3 className="font-display font-semibold text-2xl m-0 mb-1.5">
             Nivel {levelCode} completo
@@ -40,7 +41,7 @@ export function ProgressFooter({
           </div>
           <div className="w-[180px] h-1.5 bg-white/[0.18] rounded-full mt-2.5 overflow-hidden">
             <div
-              className="h-full bg-gold rounded-full transition-[width] duration-[1100ms] ease-out"
+              className="h-full bg-paper rounded-full transition-[width] duration-[1100ms] ease-out"
               style={{ width: `${fillWidth}%` }}
             />
           </div>
