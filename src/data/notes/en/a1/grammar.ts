@@ -5,6 +5,7 @@ export const grammarNotes: Note[] = [
     id: "en-a1-note-jobs-articles",
     title: "Artículos con oficios (a / an) y mayúsculas",
     category: "Gramática",
+    group: "Artículos y adjetivos",
     content: `
       <p>Para decir tu ocupación usás <code>a</code> o <code>an</code> antes
       del oficio, según cómo empieza la palabra:</p>
@@ -24,9 +25,20 @@ export const grammarNotes: Note[] = [
     `,
   },
   {
+    id: "en-a1-note-adjectives",
+    title: "Adjetivos: no cambian nunca",
+    category: "Gramática",
+    group: "Artículos y adjetivos",
+    content: `
+      <p>Los adjetivos en inglés no tienen plural ni género — quedan siempre igual.</p>
+      <p class="mt-2">Example: the computer is <strong>old</strong> / the computers are <strong>old</strong>.</p>
+    `,
+  },
+  {
     id: "en-a1-note-his-her",
     title: "His vs Her",
     category: "Gramática",
+    group: "Pronombres y demostrativos",
     content: `
       <p><code>his</code> = su/sus, solo para masculino.
       <code>her</code> = su/sus, solo para femenino.</p>
@@ -35,18 +47,10 @@ export const grammarNotes: Note[] = [
     `,
   },
   {
-    id: "en-a1-note-adjectives",
-    title: "Adjetivos: no cambian nunca",
-    category: "Gramática",
-    content: `
-      <p>Los adjetivos en inglés no tienen plural ni género — quedan siempre igual.</p>
-      <p class="mt-2">Example: the computer is <strong>old</strong> / the computers are <strong>old</strong>.</p>
-    `,
-  },
-  {
     id: "en-a1-note-possessives-numbers",
     title: "Our, its y guiones en números",
     category: "Gramática",
+    group: "Pronombres y demostrativos",
     content: `
       <ul class="list-disc pl-5 space-y-1">
         <li><code>our</code> = nuestro/a</li>
@@ -61,6 +65,7 @@ export const grammarNotes: Note[] = [
     id: "en-a1-note-demonstratives-titles",
     title: "Demostrativos y formas de tratamiento",
     category: "Gramática",
+    group: "Pronombres y demostrativos",
     content: `
       <p>Singular: this is an apple / that is an apple.<br>
       Plural: these are apples / those are apples.</p>
@@ -79,21 +84,7 @@ export const grammarNotes: Note[] = [
     id: "en-a1-note-present-simple-endings",
     title: "Presente simple: -s, -es, -ies",
     category: "Gramática",
-    content: `
-      <ul class="list-disc pl-5 space-y-1">
-        <li>Verbos terminados en <code>-en, -o, -s, -sh, -x</code> →
-        sumás <code>-es</code>: teach → teaches, do → does</li>
-        <li>Consonante + <code>-y</code> → cambia a <code>-ies</code>:
-        study → studies, cry → cries</li>
-        <li>La mayoría de los verbos → sumás <code>-s</code>:
-        work → works, love → loves</li>
-      </ul>
-    `,
-  },
-  {
-    id: "en-a1-note-present-simple-endings",
-    title: "Presente simple: -s, -es, -ies",
-    category: "Gramática",
+    group: "Presente simple",
     content: `
       <ul class="list-disc pl-5 space-y-1">
         <li>Verbos terminados en <code>-en, -o, -s, -sh, -x</code> →
@@ -109,6 +100,7 @@ export const grammarNotes: Note[] = [
     id: "en-a1-note-do-does",
     title: "Do vs Does",
     category: "Gramática",
+    group: "Presente simple",
     content: `
       <p>Los dos arman preguntas y negaciones en presente simple. La diferencia
       es la persona:</p>

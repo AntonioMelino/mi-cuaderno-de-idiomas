@@ -63,6 +63,41 @@ public/                          → assets estáticos (favicon, imágenes hero)
   `group` (ej: `group: "Números"`) para que aparezcan con su propio
   sub-encabezado dentro de la pestaña de esa categoría.
 
+### Orden estándar de apuntes (global, obligatorio para todo idioma)
+
+Todo idioma — inglés, italiano, y cualquiera que se sume después — sigue
+**el mismo orden y el mismo criterio de agrupamiento**, sin excepciones ni
+variantes por idioma:
+
+1. **Alfabeto** — si el idioma lo tiene como tema propio: categoría
+   `Pronunciación`, `group: "Alfabeto"`.
+2. **Números** — categoría `Vocabulario`, `group: "Números"`, siempre
+   agrupados de a decenas (`0-10`, `11-19`, `20-29`... `90-100`), nunca en
+   una sola lista gigante.
+3. **Gramática** — cada nota lleva `group` agrupando temas afines (nunca
+   sueltas si hay más de una nota relacionada).
+4. **Vocabulario** (incluyendo notas interactivas de esa misma categoría) —
+   agrupadas por tema con `group`.
+5. **Expresiones** — agrupadas por tema con `group`.
+
+En el `index.ts` de cada `idioma/nivel`, ese es el orden de concatenación de
+los arrays (`alphabetNotes, numberNotes, grammarNotes, vocabularyNotes,
+interactiveNotes, expressionNotes`) — replicar exactamente esta estructura
+para cualquier idioma nuevo.
+
+**Reglas duras (ya causaron bugs reales, no te las saltees):**
+
+- Toda nota de una categoría con más de un tema relacionado **debe** tener
+  `group` asignado.
+- Las notas de un mismo `group` tienen que quedar **físicamente contiguas**
+  dentro del array final de ese nivel — si un grupo queda partido por notas
+  de otro grupo en el medio, el sub-encabezado se repite en vez de mostrarse
+  una sola vez.
+- Nunca dos notas con el mismo `id`. Antes de dar por terminada una tarea de
+  contenido, correr:
+  `grep -rhoE 'id: "[^"]+"' src/data/notes | sort | uniq -d`
+  (debe devolver vacío).
+
 ## Flujo de Git (obligatorio, sin excepciones)
 
 Solo deben existir dos ramas en reposo: **`main`** y **`develop`**. Cualquier

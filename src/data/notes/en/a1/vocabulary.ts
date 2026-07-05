@@ -5,6 +5,7 @@ export const vocabularyNotes: Note[] = [
     id: "en-a1-note-pronouns",
     title: "Pronombres personales",
     category: "Vocabulario",
+    group: "Pronombres y verbos clave",
     content: `
       <ul class="grid grid-cols-2 gap-1">
         <li><code>I</code> = yo</li>
@@ -21,6 +22,7 @@ export const vocabularyNotes: Note[] = [
     id: "en-a1-note-key-verbs",
     title: "Verbos clave",
     category: "Vocabulario",
+    group: "Pronombres y verbos clave",
     content: `
       <ul class="grid grid-cols-2 gap-1">
         <li><code>be</code> (am/is/are) = ser/estar</li>
@@ -37,6 +39,7 @@ export const vocabularyNotes: Note[] = [
     id: "en-a1-note-frequent-words",
     title: "Palabras de uso frecuente",
     category: "Vocabulario",
+    group: "Palabras funcionales",
     content: `
       <ul class="grid grid-cols-2 gap-1">
         <li><code>thing</code> = cosa</li>
@@ -57,6 +60,7 @@ export const vocabularyNotes: Note[] = [
     id: "en-a1-note-connectors",
     title: "Conectores",
     category: "Vocabulario",
+    group: "Palabras funcionales",
     content: `
       <ul class="grid grid-cols-2 gap-1">
         <li><code>and</code> = y</li>
@@ -74,6 +78,7 @@ export const vocabularyNotes: Note[] = [
     id: "en-a1-note-question-words",
     title: "Palabras de pregunta (question words)",
     category: "Vocabulario",
+    group: "Palabras funcionales",
     content: `
       <ul class="grid grid-cols-2 gap-1">
         <li><code>who</code> = quién/quiénes</li>
@@ -90,6 +95,7 @@ export const vocabularyNotes: Note[] = [
     id: "en-a1-note-symbols-places",
     title: "Símbolos y tipos de lugar",
     category: "Vocabulario",
+    group: "Símbolos y lugares",
     content: `
       <ul class="grid grid-cols-2 gap-1">
         <li><code>@</code> = at</li>
@@ -105,6 +111,7 @@ export const vocabularyNotes: Note[] = [
     id: "en-a1-note-family",
     title: "Vocabulario de familia",
     category: "Vocabulario",
+    group: "Familia",
     content: `
       <ul class="grid grid-cols-2 gap-1">
         <li><code>husband</code> = esposo</li>
@@ -126,6 +133,7 @@ export const vocabularyNotes: Note[] = [
     id: "en-a1-note-parts-of-day",
     title: "Partes del día",
     category: "Vocabulario",
+    group: "Tiempo",
     content: `
       <ul class="grid grid-cols-2 gap-1">
         <li><code>morning</code> = mañana</li>
@@ -138,6 +146,7 @@ export const vocabularyNotes: Note[] = [
     id: "en-a1-note-daily-routines",
     title: "Rutina diaria (vocabulario)",
     category: "Vocabulario",
+    group: "Tiempo",
     content: `
       <ul class="grid grid-cols-2 gap-1">
         <li><code>get up</code> = levantarse</li>
