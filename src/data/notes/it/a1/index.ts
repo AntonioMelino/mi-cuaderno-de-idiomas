@@ -1,6 +1,12 @@
 import { alphabetNotes } from "./alphabet";
 import { numberNotes } from "./numbers";
+import { grammarNotes } from "./grammar";
+import { vocabularyNotes } from "./vocabulary";
 
-// Orden pensado para repaso: primero el alfabeto (cómo se lee cada letra),
-// después los números en orden ascendente de a decenas.
-export const notesA1 = [...alphabetNotes, ...numberNotes];
+// Orden global (ver CLAUDE.md): alfabeto, números, gramática, vocabulario.
+export const notesA1 = [
+  ...alphabetNotes,
+  ...numberNotes,
+  ...grammarNotes,
+  ...vocabularyNotes,
+];
