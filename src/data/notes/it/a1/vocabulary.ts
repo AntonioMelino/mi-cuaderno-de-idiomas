@@ -25,6 +25,26 @@ export const vocabularyNotes: Note[] = [
     `,
   },
   {
+    id: "it-a1-note-days-of-week",
+    title: "I giorni della settimana (los días de la semana)",
+    category: "Vocabulario",
+    group: "Días de la semana",
+    content: `
+      <p>En italiano los días de la semana se escriben en minúscula:</p>
+      <ol class="list-decimal pl-5 space-y-1">
+        <li><code>lunedì</code> = lunes</li>
+        <li><code>martedì</code> = martes</li>
+        <li><code>mercoledì</code> = miércoles</li>
+        <li><code>giovedì</code> = jueves</li>
+        <li><code>venerdì</code> = viernes</li>
+        <li><code>sabato</code> = sábado</li>
+        <li><code>domenica</code> = domingo</li>
+      </ol>
+      <p class="text-text-muted">Todos son masculinos menos <code>domenica</code>, que es femenino.
+      Para decir "los lunes" (en general) se usa el artículo: <code>il lunedì</code>.</p>
+    `,
+  },
+  {
     id: "it-a1-note-parts-of-day",
     title: "Le parti del giorno (partes del día)",
     category: "Vocabulario",
