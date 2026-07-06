@@ -24,4 +24,28 @@ export const vocabularyNotes: Note[] = [
       </ol>
     `,
   },
+  {
+    id: "it-a1-note-parts-of-day",
+    title: "Le parti del giorno (partes del día)",
+    category: "Vocabulario",
+    group: "Tiempo",
+    content: `
+      <ul class="space-y-1.5">
+        <li><code>l'alba</code> = el amanecer
+        <span class="text-text-muted">(~5:00–7:00)</span></li>
+        <li><code>la mattina</code> = la mañana
+        <span class="text-text-muted">(~7:00–12:00)</span></li>
+        <li><code>il mezzogiorno</code> = el mediodía
+        <span class="text-text-muted">(12:00)</span></li>
+        <li><code>il pomeriggio</code> = la tarde
+        <span class="text-text-muted">(~12:00–18:00)</span></li>
+        <li><code>la sera</code> = la tarde-noche
+        <span class="text-text-muted">(~18:00–24:00)</span></li>
+        <li><code>la notte</code> = la noche
+        <span class="text-text-muted">(~24:00–5:00)</span></li>
+        <li><code>la mezzanotte</code> = la medianoche
+        <span class="text-text-muted">(00:00)</span></li>
+      </ul>
+    `,
+  },
 ];
