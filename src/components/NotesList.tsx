@@ -3,21 +3,32 @@ import type { Note, NoteCategory } from "../types/Writing";
 import { NOTE_CATEGORY_ORDER } from "../types/Writing";
 import { NoteCard } from "./NoteCard";
 import { NoteCategoryTabs } from "./NoteCategoryTabs";
+import { NoteGroupTabs } from "./NoteGroupTabs";
 
 interface NotesListProps {
   levelCode: string;
   notes: Note[];
 }
 
+const UNGROUPED_LABEL = "Otros";
+
 export function NotesList({ levelCode, notes }: NotesListProps) {
   const [selectedCategory, setSelectedCategory] = useState<
     NoteCategory | "Todos"
   >("Todos");
+  const [selectedGroup, setSelectedGroup] = useState<string | "Todos">(
+    "Todos"
+  );
 
   // Si cambia el idioma/nivel (otro array de notas), volvé a "Todos".
   useEffect(() => {
     setSelectedCategory("Todos");
   }, [notes]);
+
+  // Si cambia la categoría seleccionada, el sub-filtro de tema vuelve a "Todos".
+  useEffect(() => {
+    setSelectedGroup("Todos");
+  }, [selectedCategory]);
 
   const categories = NOTE_CATEGORY_ORDER.filter((category) =>
     notes.some((note) => note.category === category)
@@ -30,10 +41,27 @@ export function NotesList({ levelCode, notes }: NotesListProps) {
     {}
   );
 
-  const visibleNotes =
+  const notesInCategory =
     selectedCategory === "Todos"
       ? notes
       : notes.filter((note) => note.category === selectedCategory);
+
+  const groups: string[] = [];
+  const groupCounts: Record<string, number> = {};
+  notesInCategory.forEach((note) => {
+    const label = note.group ?? UNGROUPED_LABEL;
+    if (!groups.includes(label)) {
+      groups.push(label);
+    }
+    groupCounts[label] = (groupCounts[label] ?? 0) + 1;
+  });
+
+  const visibleNotes =
+    selectedGroup === "Todos"
+      ? notesInCategory
+      : notesInCategory.filter(
+          (note) => (note.group ?? UNGROUPED_LABEL) === selectedGroup
+        );
 
   let lastGroup: string | undefined;
 
@@ -55,6 +83,16 @@ export function NotesList({ levelCode, notes }: NotesListProps) {
         selected={selectedCategory}
         onSelect={setSelectedCategory}
       />
+
+      {selectedCategory !== "Todos" && (
+        <NoteGroupTabs
+          groups={groups}
+          counts={groupCounts}
+          total={notesInCategory.length}
+          selected={selectedGroup}
+          onSelect={setSelectedGroup}
+        />
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
         {visibleNotes.flatMap((note) => {
