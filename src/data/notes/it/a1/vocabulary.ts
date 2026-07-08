@@ -68,4 +68,41 @@ export const vocabularyNotes: Note[] = [
       </ul>
     `,
   },
+  {
+    id: "it-a1-note-countries-nationalities",
+    title: "Paesi e nazionalità (países y nacionalidades)",
+    category: "Vocabulario",
+    group: "Países y nacionalidades",
+    content: `
+      <p>El nombre del país va con mayúscula; el adjetivo de nacionalidad va en
+      minúscula y cambia según el género: <code>-o</code> (masculino) /
+      <code>-a</code> (femenino). Si termina en <code>-e</code>, es igual para
+      los dos géneros.</p>
+      <ul class="space-y-1.5">
+        <li><code>Italia</code> → italiano / italiana = Italia → italiano</li>
+        <li><code>Germania</code> → tedesco / tedesca = Alemania → alemán</li>
+        <li><code>Francia</code> → francese = Francia → francés</li>
+        <li><code>Spagna</code> → spagnolo / spagnola = España → español</li>
+        <li><code>Inghilterra</code> → inglese = Inglaterra → inglés</li>
+        <li><code>Portogallo</code> → portoghese = Portugal → portugués</li>
+        <li><code>Stati Uniti</code> → americano / americana = Estados Unidos → estadounidense</li>
+        <li><code>Canada</code> → canadese = Canadá → canadiense</li>
+        <li><code>Messico</code> → messicano / messicana = México → mexicano</li>
+        <li><code>Brasile</code> → brasiliano / brasiliana = Brasil → brasileño</li>
+        <li><code>Argentina</code> → argentino / argentina = Argentina → argentino</li>
+        <li><code>Russia</code> → russo / russa = Rusia → ruso</li>
+        <li><code>Cina</code> → cinese = China → chino</li>
+        <li><code>Giappone</code> → giapponese = Japón → japonés</li>
+        <li><code>Grecia</code> → greco / greca = Grecia → griego</li>
+        <li><code>Svizzera</code> → svizzero / svizzera = Suiza → suizo</li>
+        <li><code>Austria</code> → austriaco / austriaca = Austria → austríaco</li>
+        <li><code>Polonia</code> → polacco / polacca = Polonia → polaco</li>
+        <li><code>Paesi Bassi</code> → olandese = Países Bajos → neerlandés</li>
+      </ul>
+      <p class="text-text-muted">Para decir "soy de..." se usa <code>essere di</code> +
+      país (<code>Sono di Roma</code>) o <code>venire da</code> + país
+      (<code>Vengo dall'Italia</code>). Para decir la nacionalidad se usa
+      <code>essere</code> + adjetivo, sin artículo: <code>Sono italiano</code>.</p>
+    `,
+  },
 ];
