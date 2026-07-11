@@ -2,6 +2,58 @@ import type { Note } from "../../../../types/Writing";
 
 export const grammarNotes: Note[] = [
   {
+    id: "en-a1-note-to-be-affirmative",
+    title: "Verbo To Be: am / is / are",
+    category: "Gramática",
+    group: "Verbo To Be",
+    content: `
+      <p><code>to be</code> (ser/estar) es irregular: cambia según la
+      persona.</p>
+      <ul class="list-disc pl-5 mt-2 space-y-1">
+        <li><code>I</code> + <code>am</code> (I'm)</li>
+        <li><code>you / we / they</code> + <code>are</code> (you're / we're / they're)</li>
+        <li><code>he / she / it</code> + <code>is</code> (he's / she's / it's)</li>
+      </ul>
+      <p class="mt-3">Se usa para identidad, descripción, edad,
+      nacionalidad, profesión y ubicación:</p>
+      <ul class="list-disc pl-5 mt-2 space-y-1">
+        <li>I'm Antonio. (identidad)</li>
+        <li>She's very nice. (descripción)</li>
+        <li>He's twenty-eight years old. (edad — siempre con <code>be</code>, no con <code>have</code>)</li>
+        <li>We're from Argentina. (nacionalidad/origen)</li>
+        <li>They're at home. (ubicación)</li>
+      </ul>
+    `,
+  },
+  {
+    id: "en-a1-note-to-be-negative-questions",
+    title: "To be: negativo e interrogativo",
+    category: "Gramática",
+    group: "Verbo To Be",
+    content: `
+      <p><strong>Negativo</strong> — se agrega <code>not</code> después del
+      verbo:</p>
+      <ul class="list-disc pl-5 mt-2 space-y-1">
+        <li>I am not (I'm not)</li>
+        <li>you/we/they are not (aren't)</li>
+        <li>he/she/it is not (isn't)</li>
+      </ul>
+      <p class="mt-3"><strong>Interrogativo</strong> — se invierte el orden,
+      el verbo va primero:</p>
+      <ul class="list-disc pl-5 mt-2 space-y-1">
+        <li>Am I late?</li>
+        <li>Are you a student?</li>
+        <li>Is she your sister?</li>
+      </ul>
+      <p class="mt-3"><strong>Respuestas cortas</strong> (no se repite todo
+      el sujeto de la pregunta):</p>
+      <ul class="list-disc pl-5 mt-2 space-y-1">
+        <li>Are you a student? → Yes, I am. / No, I'm not.</li>
+        <li>Is he your friend? → Yes, he is. / No, he isn't.</li>
+      </ul>
+    `,
+  },
+  {
     id: "en-a1-note-jobs-articles",
     title: "Artículos con oficios (a / an) y mayúsculas",
     category: "Gramática",
