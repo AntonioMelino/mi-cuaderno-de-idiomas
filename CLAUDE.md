@@ -29,6 +29,12 @@ src/
                                   numbers.ts, interactive.ts...)
       index.ts                   → junta todas las notas del nivel, en el
                                   orden en que se quieren ver
+    notes/flagMarkup.ts           → helpers compartidos entre idiomas para
+                                  dibujar banderas como HTML/CSS/SVG (no
+                                  emoji) dentro de contenido de notas
+                                  (dangerouslySetInnerHTML). Usar esto en vez
+                                  de duplicar la lógica si un vocabulary.ts
+                                  nuevo necesita banderas (países, etc.)
   components/                   → un componente por pieza de UI:
     Hero.tsx                     → banner principal + sello de nivel
     LanguageTabs.tsx              → selector de idioma
