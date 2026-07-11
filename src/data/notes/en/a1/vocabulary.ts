@@ -209,6 +209,28 @@ export const vocabularyNotes: Note[] = [
     `,
   },
   {
+    id: "en-a1-note-days-of-week",
+    title: "Days of the week (días de la semana)",
+    category: "Vocabulario",
+    group: "Días de la semana",
+    content: `
+      <p>En inglés los días de la semana se escriben siempre con
+      mayúscula (a diferencia del español):</p>
+      <ol class="list-decimal pl-5 space-y-1">
+        <li><code>Monday</code> (Mon) = lunes</li>
+        <li><code>Tuesday</code> (Tue) = martes</li>
+        <li><code>Wednesday</code> (Wed) = miércoles</li>
+        <li><code>Thursday</code> (Thu) = jueves</li>
+        <li><code>Friday</code> (Fri) = viernes</li>
+        <li><code>Saturday</code> (Sat) = sábado</li>
+        <li><code>Sunday</code> (Sun) = domingo</li>
+      </ol>
+      <p class="text-text-muted mt-2">Para decir en qué día pasa algo se usa
+      la preposición <code>on</code>: <code>on Monday</code> (el lunes) /
+      <code>on Mondays</code> (los lunes, en general).</p>
+    `,
+  },
+  {
     id: "en-a1-note-parts-of-day",
     title: "Partes del día",
     category: "Vocabulario",
