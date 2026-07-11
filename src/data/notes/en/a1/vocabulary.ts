@@ -1,4 +1,65 @@
 import type { Note } from "../../../../types/Writing";
+import { stripeFlag, specialFlags } from "../../flagMarkup";
+
+interface CountryEntry {
+  country: string;
+  adjective: string;
+  countryEs: string;
+  adjectiveEs: string;
+  flag: string;
+}
+
+const countries: CountryEntry[] = [
+  { country: "England", adjective: "English", countryEs: "Inglaterra", adjectiveEs: "inglés",
+    flag: specialFlags.gb },
+  { country: "United States", adjective: "American", countryEs: "Estados Unidos", adjectiveEs: "estadounidense",
+    flag: specialFlags.us },
+  { country: "Canada", adjective: "Canadian", countryEs: "Canadá", adjectiveEs: "canadiense",
+    flag: specialFlags.ca },
+  { country: "Australia", adjective: "Australian", countryEs: "Australia", adjectiveEs: "australiano",
+    flag: specialFlags.au },
+  { country: "Ireland", adjective: "Irish", countryEs: "Irlanda", adjectiveEs: "irlandés",
+    flag: stripeFlag(["#169b62", "#ffffff", "#ff883e"], "to right") },
+  { country: "Argentina", adjective: "Argentinian", countryEs: "Argentina", adjectiveEs: "argentino",
+    flag: stripeFlag(["#74acdf", "#ffffff", "#74acdf"], "to bottom") },
+  { country: "Spain", adjective: "Spanish", countryEs: "España", adjectiveEs: "español",
+    flag: stripeFlag(["#aa151b", "#f1bf00", "#aa151b"], "to bottom", [25, 50, 25]) },
+  { country: "Italy", adjective: "Italian", countryEs: "Italia", adjectiveEs: "italiano",
+    flag: stripeFlag(["#008c45", "#ffffff", "#cd212a"], "to right") },
+  { country: "France", adjective: "French", countryEs: "Francia", adjectiveEs: "francés",
+    flag: stripeFlag(["#0055a4", "#ffffff", "#ef4135"], "to right") },
+  { country: "Germany", adjective: "German", countryEs: "Alemania", adjectiveEs: "alemán",
+    flag: stripeFlag(["#000000", "#dd0000", "#ffce00"], "to bottom") },
+  { country: "Portugal", adjective: "Portuguese", countryEs: "Portugal", adjectiveEs: "portugués",
+    flag: stripeFlag(["#046a38", "#da291c"], "to right", [40, 60]) },
+  { country: "Brazil", adjective: "Brazilian", countryEs: "Brasil", adjectiveEs: "brasileño",
+    flag: specialFlags.br },
+  { country: "Mexico", adjective: "Mexican", countryEs: "México", adjectiveEs: "mexicano",
+    flag: stripeFlag(["#006341", "#ffffff", "#ce1126"], "to right") },
+  { country: "Japan", adjective: "Japanese", countryEs: "Japón", adjectiveEs: "japonés",
+    flag: specialFlags.jp },
+  { country: "China", adjective: "Chinese", countryEs: "China", adjectiveEs: "chino",
+    flag: specialFlags.cn },
+  { country: "Russia", adjective: "Russian", countryEs: "Rusia", adjectiveEs: "ruso",
+    flag: stripeFlag(["#ffffff", "#0039a6", "#d52b1e"], "to bottom") },
+  { country: "Greece", adjective: "Greek", countryEs: "Grecia", adjectiveEs: "griego",
+    flag: specialFlags.gr },
+  { country: "Switzerland", adjective: "Swiss", countryEs: "Suiza", adjectiveEs: "suizo",
+    flag: specialFlags.ch },
+];
+
+const countryListHtml = countries
+  .map(
+    (c) => `
+        <li class="flex items-center gap-3 py-2 border-b border-ink/6 last:border-b-0">
+          ${c.flag}
+          <span class="leading-snug">
+            <code>${c.country}</code> → ${c.adjective}
+            <span class="block text-text-muted text-[0.85em]">${c.countryEs} → ${c.adjectiveEs}</span>
+          </span>
+        </li>`,
+  )
+  .join("");
 
 export const vocabularyNotes: Note[] = [
   {
@@ -127,6 +188,24 @@ export const vocabularyNotes: Note[] = [
         <li><code>cousins</code> = primos</li>
         <li><code>foster child</code> = hijo adoptivo</li>
       </ul>
+    `,
+  },
+  {
+    id: "en-a1-note-countries-nationalities",
+    title: "Countries and nationalities (países y nacionalidades)",
+    category: "Vocabulario",
+    group: "Países y nacionalidades",
+    content: `
+      <p>El país y el adjetivo de nacionalidad van siempre con mayúscula en
+      inglés (a diferencia del español). El adjetivo de nacionalidad
+      <strong>no cambia</strong> según el género — como cualquier adjetivo en
+      inglés.</p>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 mt-3">
+        ${countryListHtml}
+      </ul>
+      <p class="text-text-muted mt-3">Para decir de dónde sos: <code>I'm from
+      + país</code> (I'm from Argentina). Para decir la nacionalidad:
+      <code>I'm + adjetivo</code> (I'm Argentinian).</p>
     `,
   },
   {
