@@ -231,6 +231,34 @@ export const vocabularyNotes: Note[] = [
     `,
   },
   {
+    id: "en-a1-note-months",
+    title: "Months of the year (meses del año)",
+    category: "Vocabulario",
+    group: "Meses del año",
+    content: `
+      <p>En inglés los meses se escriben siempre con mayúscula (a
+      diferencia del español):</p>
+      <ol class="list-decimal pl-5 space-y-1">
+        <li><code>January</code> (Jan) = enero</li>
+        <li><code>February</code> (Feb) = febrero</li>
+        <li><code>March</code> (Mar) = marzo</li>
+        <li><code>April</code> (Apr) = abril</li>
+        <li><code>May</code> = mayo</li>
+        <li><code>June</code> (Jun) = junio</li>
+        <li><code>July</code> (Jul) = julio</li>
+        <li><code>August</code> (Aug) = agosto</li>
+        <li><code>September</code> (Sep) = septiembre</li>
+        <li><code>October</code> (Oct) = octubre</li>
+        <li><code>November</code> (Nov) = noviembre</li>
+        <li><code>December</code> (Dec) = diciembre</li>
+      </ol>
+      <p class="text-text-muted mt-2">Para decir "en" un mes se usa
+      <code>in</code>: <code>in April</code> (en abril). Para una fecha
+      completa se usa <code>on</code>: <code>on 25 April</code> (el 25 de
+      abril).</p>
+    `,
+  },
+  {
     id: "en-a1-note-parts-of-day",
     title: "Partes del día",
     category: "Vocabulario",
