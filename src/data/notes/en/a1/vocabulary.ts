@@ -259,6 +259,36 @@ export const vocabularyNotes: Note[] = [
     `,
   },
   {
+    id: "en-a1-note-clothes",
+    title: "Ropa (clothes)",
+    category: "Vocabulario",
+    group: "Ropa",
+    content: `
+      <ul class="grid grid-cols-2 gap-1">
+        <li><code>shirt</code> = camisa</li>
+        <li><code>t-shirt</code> = remera</li>
+        <li><code>pants / trousers</code> = pantalón</li>
+        <li><code>jeans</code> = jean</li>
+        <li><code>shorts</code> = pantalón corto</li>
+        <li><code>dress</code> = vestido</li>
+        <li><code>skirt</code> = pollera</li>
+        <li><code>jacket</code> = campera</li>
+        <li><code>coat</code> = abrigo/tapado</li>
+        <li><code>sweater</code> = sweater</li>
+        <li><code>shoes</code> = zapatos</li>
+        <li><code>socks</code> = medias</li>
+        <li><code>hat</code> = gorro/sombrero</li>
+        <li><code>scarf</code> = bufanda</li>
+        <li><code>gloves</code> = guantes</li>
+        <li><code>glasses</code> = anteojos</li>
+      </ul>
+      <p class="mt-3 text-text-muted">Recordá: con ropa se usa el verbo
+      <code>wear</code>, no <code>use</code>. Las prendas que van de a pares
+      (pants, jeans, shorts, socks, shoes, glasses) siempre son plural: my
+      jeans <strong>are</strong> new, not my jeans <strong>is</strong> new.</p>
+    `,
+  },
+  {
     id: "en-a1-note-parts-of-day",
     title: "Partes del día",
     category: "Vocabulario",
