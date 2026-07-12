@@ -199,4 +199,31 @@ export const grammarNotes: Note[] = [
       <p class="mt-2">Negación: <code>don't</code> / <code>doesn't</code> + verbo base.</p>
     `,
   },
+  {
+    id: "en-a1-note-adverbs-frequency",
+    title: "Adverbios de frecuencia: always, usually, often, never...",
+    category: "Gramática",
+    group: "Adverbios de frecuencia",
+    content: `
+      <p>De más a menos frecuencia:</p>
+      <ul class="grid grid-cols-2 gap-1">
+        <li><code>always</code> = siempre (100%)</li>
+        <li><code>usually</code> = usualmente</li>
+        <li><code>often</code> = seguido</li>
+        <li><code>sometimes</code> = a veces</li>
+        <li><code>rarely / seldom</code> = rara vez</li>
+        <li><code>never</code> = nunca (0%)</li>
+      </ul>
+      <p class="mt-3"><strong>Posición:</strong> antes del verbo principal,
+      pero <strong>después</strong> de <code>to be</code>:</p>
+      <ul class="list-disc pl-5 mt-2 space-y-1">
+        <li>I <strong>usually</strong> have lunch at one. (antes de "have")</li>
+        <li>She is <strong>always</strong> late. (después de "is")</li>
+        <li>Do you <strong>usually</strong> work on Sundays?</li>
+      </ul>
+      <p class="mt-2 text-text-muted">Error común: no van al principio de la
+      oración en inglés — decimos "I usually have asado", no "Usually I have
+      asado".</p>
+    `,
+  },
 ];
