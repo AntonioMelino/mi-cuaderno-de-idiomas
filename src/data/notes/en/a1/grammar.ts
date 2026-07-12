@@ -87,30 +87,29 @@ export const grammarNotes: Note[] = [
     `,
   },
   {
-    id: "en-a1-note-his-her",
-    title: "His vs Her",
+    id: "en-a1-note-possessive-adjectives",
+    title: "Posesivos: my / your / his / her / its / our / their",
     category: "Gramática",
     group: "Pronombres y demostrativos",
     content: `
-      <p><code>his</code> = su/sus, solo para masculino.
-      <code>her</code> = su/sus, solo para femenino.</p>
-      <p class="mt-2">Example: What's <strong>his</strong> name? — <strong>His</strong>
-      name is Enzo. / He's Enzo.</p>
-    `,
-  },
-  {
-    id: "en-a1-note-possessives-numbers",
-    title: "Our, its y guiones en números",
-    category: "Gramática",
-    group: "Pronombres y demostrativos",
-    content: `
-      <ul class="list-disc pl-5 space-y-1">
-        <li><code>our</code> = nuestro/a</li>
-        <li><code>its</code> = su/sus, pero para una cosa (sin apóstrofe —
-        no confundir con <code>it's</code> = it is)</li>
+      <p>Los posesivos en inglés no cambian según lo que poseen (a
+      diferencia del español "mi/mis") — son invariables, como cualquier
+      adjetivo:</p>
+      <ul class="grid grid-cols-2 gap-1 mt-2">
+        <li><code>my</code> = mi/mis</li>
+        <li><code>your</code> = tu/tus, su/sus (de "you")</li>
+        <li><code>his</code> = su/sus (de él)</li>
+        <li><code>her</code> = su/sus (de ella)</li>
+        <li><code>its</code> = su/sus (de una cosa o animal)</li>
+        <li><code>our</code> = nuestro/a/os/as</li>
+        <li><code>their</code> = su/sus (de ellos/ellas)</li>
       </ul>
-      <p class="mt-2">Recordá el guion en los números compuestos:
-      34 = <code>thirty-four</code>.</p>
+      <p class="mt-3">Examples: What's <strong>his</strong> name? — <strong>His</strong>
+      name is Enzo. / This is <strong>our</strong> house. / They love
+      <strong>their</strong> dog.</p>
+      <p class="mt-2 text-text-muted"><code>its</code> (posesivo, sin
+      apóstrofe) no es lo mismo que <code>it's</code> (it is): <em>the dog
+      wags its tail</em> vs. <em>it's a good dog</em>.</p>
     `,
   },
   {
