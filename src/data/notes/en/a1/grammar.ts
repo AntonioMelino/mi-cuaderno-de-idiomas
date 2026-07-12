@@ -133,18 +133,48 @@ export const grammarNotes: Note[] = [
     `,
   },
   {
-    id: "en-a1-note-present-simple-endings",
-    title: "Presente simple: -s, -es, -ies",
+    id: "en-a1-note-plural-nouns",
+    title: "Plural de sustantivos y presente simple: la misma regla -s / -es / -ies",
     category: "Gramática",
-    group: "Presente simple",
+    group: "Plural de sustantivos",
     content: `
-      <ul class="list-disc pl-5 space-y-1">
-        <li>Verbos terminados en <code>-en, -o, -s, -sh, -x</code> →
-        sumás <code>-es</code>: teach → teaches, do → does</li>
+      <p>Los sustantivos regulares forman el plural con la misma regla
+      ortográfica que ya usás en presente simple (he/she/it + verbo):</p>
+      <ul class="list-disc pl-5 mt-2 space-y-1">
+        <li>La mayoría → sumás <code>-s</code>: cat → cats, book → books
+        (y en verbos: work → works, love → loves)</li>
+        <li>Terminados en <code>-s, -ss, -sh, -ch, -x, -o</code> → sumás
+        <code>-es</code>: box → boxes, watch → watches, potato → potatoes
+        (y en verbos: teach → teaches, do → does)</li>
         <li>Consonante + <code>-y</code> → cambia a <code>-ies</code>:
-        study → studies, cry → cries</li>
-        <li>La mayoría de los verbos → sumás <code>-s</code>:
-        work → works, love → loves</li>
+        city → cities, baby → babies (y en verbos: study → studies,
+        cry → cries)</li>
+        <li>Vocal + <code>-y</code> → se mantiene, solo sumás <code>-s</code>:
+        day → days, boy → boys</li>
+      </ul>
+      <p class="mt-3 text-text-muted">Pronunciación de la <code>-s</code>
+      final: /s/ (cats), /z/ (dogs), /ɪz/ después de -s/-sh/-ch/-x/-ge
+      (boxes, watches).</p>
+    `,
+  },
+  {
+    id: "en-a1-note-irregular-plurals",
+    title: "Plurales irregulares",
+    category: "Gramática",
+    group: "Plural de sustantivos",
+    content: `
+      <p>Algunos sustantivos no siguen la regla de <code>-s</code> — hay
+      que memorizarlos:</p>
+      <ul class="grid grid-cols-2 gap-1 mt-2">
+        <li><code>man</code> → <code>men</code></li>
+        <li><code>woman</code> → <code>women</code></li>
+        <li><code>child</code> → <code>children</code></li>
+        <li><code>person</code> → <code>people</code></li>
+        <li><code>foot</code> → <code>feet</code></li>
+        <li><code>tooth</code> → <code>teeth</code></li>
+        <li><code>mouse</code> → <code>mice</code></li>
+        <li><code>fish</code> → <code>fish</code> (no cambia)</li>
+        <li><code>sheep</code> → <code>sheep</code> (no cambia)</li>
       </ul>
     `,
   },
