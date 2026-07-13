@@ -289,6 +289,33 @@ export const vocabularyNotes: Note[] = [
     `,
   },
   {
+    id: "en-a1-note-colors",
+    title: "Colores (colors)",
+    category: "Vocabulario",
+    group: "Colores",
+    content: `
+      <ul class="grid grid-cols-2 gap-1">
+        <li><code>red</code> = rojo</li>
+        <li><code>blue</code> = azul</li>
+        <li><code>green</code> = verde</li>
+        <li><code>yellow</code> = amarillo</li>
+        <li><code>orange</code> = naranja</li>
+        <li><code>purple</code> = violeta</li>
+        <li><code>pink</code> = rosa</li>
+        <li><code>brown</code> = marrón</li>
+        <li><code>black</code> = negro</li>
+        <li><code>white</code> = blanco</li>
+        <li><code>gray / grey</code> = gris</li>
+      </ul>
+      <p class="mt-3 text-text-muted">El color va como adjetivo, antes del
+      sustantivo y sin cambiar nunca (ni por género ni por número): a
+      <code>red</code> jacket, two <code>red</code> jackets. Para tonos
+      claros u oscuros se agrega <code>light</code> u <code>dark</code>
+      antes del color: <code>light blue</code> (celeste), <code>dark
+      green</code> (verde oscuro).</p>
+    `,
+  },
+  {
     id: "en-a1-note-parts-of-day",
     title: "Partes del día",
     category: "Vocabulario",
